@@ -11,8 +11,8 @@ import "dart:io";
 2*10 = 10; */
 
 void main() {
-  int num = 2;
+  int num1 = 2;
   for (var i = 1; i <= 12; i++) {
-  print("$num * $i = ${num * i}");
+    print("$num1 * $i = ${num1 * i}");
   }
 }

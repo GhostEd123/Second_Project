@@ -15,7 +15,7 @@ void main() {
   guessGame(3);
 }
 
-void guessGame(int num) {
+void guessGame(int num1) {
   
    Random rand = new Random();
    //creating a random variable
@@ -23,11 +23,11 @@ void guessGame(int num) {
    int num2 = rand.nextInt(10);
    //Generating a random number of maximum 10 and assignin it to num2
    
-   if (num ==num2 ) {
+   if (num1 == num2 ) {
      print("CONGRATULATIONS!! You guessed the right number!");
-   } else if (num > num2) {
-     print("Your guess is too high!");
-   } else if (num < num2) {
-     print("Your guess is too Low!");
+   } else if (num1 > num2) {
+       print("Your guess is too high!");
+   } else if (num1 < num2) {
+       print("Your guess is too Low!");
    }
 }

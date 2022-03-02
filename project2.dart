@@ -18,37 +18,37 @@ We believe you are the best person for the job😁️, and we want you to make a
 
 void main() {
   print('Guess a number between 1 and 10 : ');
-  int num = int.parse(stdin.readLineSync());
+  int num3 = int.parse(stdin.readLineSync());
   //Receiving user input for the Guess game
 
-  guessGame(num);
+  guessGame(num3);
   //calling the Function 'guessGame()'
 }
 
-void guessGame(int num) {
+void guessGame(int num1) {
   
-   Random rand = new Random(10);
+   Random rand = new Random();
    //creating a random variable
 
    int num2 = rand.nextInt(10);
    //Generating a random number of maximum 10 and assignin it to num2
    
    int count = 1;
-   while (num != num2) {
+   while (num1 != num2) {
      //Loop to ensure that the user is given another try at guessing the right number
-      if (num > num2) {
+      if (num1 > num2) {
         print("Your guess is too high!");
-      } else if (num < num2) {
-        print("Your guess is too Low!");
+      } else if (num1 < num2) {
+          print("Your guess is too Low!");
       }
-      print("Enter another Guess: ");
-      num = int.parse(stdin.readLineSync());
-     count += 1;
+        print("Enter another Guess: ");
+        num1 = int.parse(stdin.readLineSync());
+        count += 1;
    }
 
-   if (num ==num2 ) {
-     print("CONGRATULATIONS!! You guessed the right number!");
-     print("You Guessed the right number after $count guesses"); 
+   if (num1 ==num2 ) {
+      print("CONGRATULATIONS!! You guessed the right number!");
+      print("You Guessed the right number after $count guesses"); 
     
    }
 }

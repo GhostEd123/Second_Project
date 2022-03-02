@@ -9,9 +9,9 @@ import "dart:io";
  */
 
 void main() {
- greet("Mirarosue"); 
+  greet("Mirarosue"); 
 }
 
 void greet(String name) {
- print("Hello $name, Welcome to Deebug");
+    print("Hello $name, Welcome to Deebug");
 }

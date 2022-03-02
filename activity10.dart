@@ -12,21 +12,22 @@ Less than 1.00 >> Fail */
 
 void main() {
   print("Enter CGPA: ");
-  double CGPA = double.parse(stdin.readLineSync());
+  double cgpa = double.parse(stdin.readLineSync());
   // collecting user CGPA
 
-  if (CGPA >= 4.50) {
+  if (cgpa >= 4.50 && cgpa <= 5.00) {
     print("You graduated with a First Class");
-  } else if (CGPA >= 3.50 && CGPA <= 4.49) {
-    print("You graduated with a Second Class Upper");
-  } else if (CGPA >= 2.50 && CGPA <= 3.49) {
-    print("You graduated with a Second Class Lower");
-  } else if (CGPA >= 1.50 && CGPA <= 2.39) {
-    print("You graduated with a Third Class");
-  }else if (CGPA >= 1.00 && CGPA <= 1.49) {
+  } else if (cgpa >= 3.50 && cgpa <= 4.49) {
+      print("You graduated with a Second Class Upper");
+  } else if (cgpa >= 2.50 && cgpa <= 3.49) {
+      print("You graduated with a Second Class Lower");
+  } else if (cgpa >= 1.50 && cgpa <= 2.39) {
+      print("You graduated with a Third Class");
+  }else if (cgpa >= 1.00 && cgpa <= 1.49) {
       print("You graduated with a Pass");
-    }
-   else {
-    print("You FAILED!!");
-  }
+  }else if (cgpa < 1.00) {
+      print("You FAILED!!");
+  }else {
+      print('INVALID CGPA!!!!');
+   }
 }

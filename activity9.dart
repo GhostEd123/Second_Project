@@ -1,4 +1,5 @@
 //@dart=2.10
+import 'dart:html';
 import "dart:io";
 
 /**Write a program that can collect a students' exam score and then display the corresponding grade.
@@ -12,19 +13,21 @@ If the user input is:
 -else, print to the console, "you scored an F" */
 
 void main() {
-  print("Enter Score: ");
-  int score = int.parse(stdin.readLineSync());
+   print("Enter Score: ");
+   int score = int.parse(stdin.readLineSync());
 
-  if (score > 69) {
+  if (score > 69 && score <= 100) {
     print("You scored an A");
   } else if (score > 59 && score < 70) {
-    print("You scored a B");
+      print("You scored a B");
   } else if (score >= 50 && score < 60) {
-    print("You scored a C");
+      print("You scored a C");
   } else if (score > 44 && score < 50) {
-    print("You scored a D");
+      print("You scored a D");
+  } else if (score >= 0 && score <= 43) {
+      print("You scored an F");
   } else {
-    print("You scored an F");
+      print("Invalid Score!!");
   }
   
 }
